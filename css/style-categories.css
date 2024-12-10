@@ -1,0 +1,97 @@
+.btn-group {
+    background-color: #e4ecff;
+    margin: auto 4px;
+    font-weight: 400;
+    align-items: right;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.5s ease;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btn-light, .btn-link {
+    color: #1c0e34;
+    background-color: #e4ecff;
+    border: none;
+    text-decoration: none;
+}
+
+.btn-link {
+    background-color: #efefef;
+}
+
+.btn-light:hover, .btn-link:hover {
+    background: #cad9fc;
+    color: #1c0e34;
+}
+
+.btn-light:focus, .btn-link:focus {
+    background-color: #cad9fc;
+}
+
+.btn-check:active+.btn-light, .btn-check:checked+.btn-light, .btn-light.active, .btn-light:active, .show>.btn-light.dropdown-toggle {
+    color: #1c0e34;
+    background-color: #cad9fc;
+    border: none
+}
+
+input {
+    border: 2px solid #efefef !important;
+    border-radius: 6px !important;
+    background-color: #efefef !important;
+    font-size: 1rem !important;
+}
+
+input:hover {
+    border: 2px solid #1c0e34 !important;
+    transition: border-color 0.5s ease !important;
+}
+
+.list-group-item {
+    color: black;
+    margin: auto;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    cursor: pointer;
+    padding: 3% 5%;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: var(--color-cards);
+    
+
+    /*sacar los bordes que pone bootstrap*/
+    border-top-right-radius: 30px !important;
+    border-top-left-radius: 30px !important;
+    border-bottom-right-radius: 30px !important;
+    border-bottom-left-radius: 30px !important;
+    border: none;
+}
+
+.list-group-item:hover {
+    background-color: var(--hover-cards);
+}
+
+.img-thumbnail {
+    border-radius: 20px;
+    padding: 0%;
+}
+
+h4 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--color-fondo-invertidos);
+    justify-content: flex-start;
+}
+
+.description {
+    color: var(--color-secundario);
+    font-size: 18px;
+    padding-top: 2%;
+}
+
+small {
+    color: var(--color-primario) !important;
+}
+
+body {
+    color: var(--color-fondo-invertidos);
+}

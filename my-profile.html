@@ -1,73 +1,236 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>eMercado - Todo lo que busques está aquí</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i"
+      rel="stylesheet"
+    />
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/style-profile.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>eMercado - Todo lo que busques está aquí</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <style>
-    .bd-placeholder-img {
-      font-size: 1.125rem;
-      text-anchor: middle;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    }
-
-    @media (min-width: 768px) {
-      .bd-placeholder-img-lg {
-        font-size: 3.5rem;
-      }
-    }
-  </style>
-</head>
-
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav w-100 justify-content-between">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="categories.html">Categorías</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sell.html">Vender</a>
-          </li>
-          <li class="nav-item">
-          </li>
-        </ul>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 justify-content-between">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="categories.html">Categorías</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sell.html">Vender</a>
+            </li>
+          </ul>
+        </div>
+        <div class="perfil">
+          <img
+            id="fotoPerfil"
+            alt="Foto de perfil"
+            class="profile-pic"
+            src="img/img_perfil.png"
+          />
+          <a class="nav-link" id="miPerfil" href="#">Perfil</a>
+        </div>
       </div>
-    </div>
-  </nav>
-  <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
-    </div>
-  </main>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-end">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
-    </div>
-  </footer>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/my-profile.js"></script>
-</body>
+    </nav>
+    <main>
+      <!--Formulario comienzo-->
 
+      <form action="" class="form was-validated" id="profile-form" novalidate>
+        <section class="right-section col-12 col-lg-7 col-md-12 order-2">
+          <div class="row">
+            <small>Mi Perfil > Información personal</small>
+            <h4>Información personal</h4>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-6">
+              <label name="nombre" class="col-12">Nombre:</label>
+              <input
+                id="nombre"
+                type="text"
+                name="nombre"
+                class="col-10 form-control"
+                required
+              />
+            </div>
+
+            <div class="col-12 col-lg-6 col-md-6">
+              <label name="segundo_nombre" class="col-12"
+                >Segundo nombre:</label
+              >
+              <input
+                id="segundo_nombre"
+                type="text"
+                name="segundo_nombre"
+                class="col-10"
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-6">
+              <label name="apellido" class="col-12">Apellido:</label>
+              <input
+                id="apellido"
+                type="text"
+                name="apellido"
+                class="col-10 form-control"
+                required
+              />
+            </div>
+
+            <div class="col-12 col-lg-6 col-md-6">
+              <label name="segundo_apellido" class="col-12"
+                >Segundo apellido:</label
+              >
+              <input
+                id="segundo_apellido"
+                type="text"
+                name="segundo_apellido"
+                class="col-10"
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12">
+              <label name="email" class="col-12">E-mail:</label>
+              <input
+                id="email"
+                type="email"
+                name="email"
+                class="col-11 form-control"
+                required
+              />
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-6">
+              <label name="telefono_contacto" class="col-12"
+                >Telefono de contacto:</label
+              >
+              <input
+                id="telefono_contacto"
+                type="number"
+                name="telefono_contacto"
+                class="col-10"
+              />
+            </div>
+
+            <!--Foto de perfil-->
+            <div class="col-12 col-lg-6 col-md-6" id="btnImg">
+              <label name="imagen" class="col-12"
+                >Selecciona una foto de perfil:</label
+              >
+              <label for="imagen" id="file-label" class="btnAzul botones col-12"
+                >Elegir archivo</label
+              >
+              <input
+                type="file"
+                id="imagen"
+                name="imagen"
+                accept="image/*"
+                class="col-10"
+              />
+            </div>
+            <div
+              class="col-12 col-lg-6 col-md-6 ms-lg-auto ms-md-auto"
+              id="imgValid"
+            >
+              <small id="valid-feedback-img">Imagen cargada con exito </small>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-6 col-md-6">
+              <input
+                type="button"
+                id="guardarBtn"
+                value="Guardar cambios"
+                class="btnRojo botones col-12 col-lg-10"
+              />
+            </div>
+          </div>
+        </section>
+
+        <section class="left-section col-12 col-lg-3 order-1">
+          <div class="col-12 col-lg-12 col-md-5 imagenP">
+            <img src="" id="imgPerfil" />
+          </div>
+
+          <!--Seleccion de modo -->
+          <div id="modo" class="col-12 col-md-6 col-lg-12">
+            <div class="row">
+              <label>Selecciona un tema:</label>
+            </div>
+            <div class="row btnRadio">
+              <div class="col-12 form-check">
+                <input
+                  type="radio"
+                  name="modo"
+                  id="modo_dia"
+                  value="dia"
+                  class="form-check-input"
+                  checked
+                />
+                <label for="modo_dia">Modo Dia</label>
+              </div>
+              <div class="col-12 form-check">
+                <input
+                  type="radio"
+                  name="modo"
+                  id="modo_noche"
+                  value="noche"
+                  class="form-check-input"
+                />
+                <label for="modo_noche">Modo Noche</label>
+              </div>
+            </div>
+          </div>
+        </section>
+      </form>
+    </main>
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-end">
+          <a href="#">Volver arriba</a>
+        </p>
+        <p>
+          Este sitio forma parte de
+          <a href="https://jovenesaprogramar.edu.uy/" target="_blank"
+            >Jovenes a Programar</a>
+            &emsp; 
+          Icons by:
+          <a href="https://lordicon.com/">Lordicon.com</a>
+        </p>
+      </div>
+    </footer>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/init.js"></script>
+    <script type="module" src="js/my-profile.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  </body>
 </html>

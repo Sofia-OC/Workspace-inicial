@@ -7,32 +7,73 @@
   <title>eMercado - Todo lo que busques está aquí</title>
   
   <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-  <style>
-    body {
-      background-color: rgb(248, 249, 250);
-    }
-  </style>
+  <link href="css/style-login.css" rel="stylesheet">
+    
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+    rel="stylesheet"
+  />
 </head>
 
-<body>
-  <main class="mt-5">
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+<body class="login-body">
+  <main>
+   
+    <nav class="navbar navbar-expand-lg navbar-light bg-light p-1">
+      <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 justify-content-between">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="categories.html">Categorías</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sell.html">Vender</a>
+            </li>
+            <li class="nav-item">
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="miPerfil"href="#">Perfil</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="login col-lg-12 ">
+      <div class="left-section col-lg-6 d-none d-lg-block "> 
+      <!--d-none oculta en todas las pantallas y d-lg-block lo muestra solo en la grande --> 
+      <video autoplay loop muted>
+        <source src="video\video_para_loggin2.mp4" id="video_loggin" type="video/mp4">
+    </video>
+      </div>
+
+
+      <div class="right-section col-lg-4 col-md-12">
+        <div class="login-box">
+
+          <h2>Login</h2>
+          <p>Por favor, inicia sesión en tu cuenta y descubre los más asombrosos productos.</p>
+          <label class="form control">E-mail:<input type="email" id="email" class="form-control"></label><br>
+          <label class="form control">Contraseña:<input type="password" id="contraseña" class="form-control"></label><br>
+          <div class="recordarusuario">
+          
+        </div>
+          <button  id="inicio" type="submit">Iniciar sesión</button>
       </div>
     </div>
   </main>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-end">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
-    </div>
-  </footer>
-  <script src="js/login.js"></script>
+  <script type="module" src="js/login.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

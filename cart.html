@@ -1,66 +1,226 @@
 <!DOCTYPE html>
 <html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <title>eMercado - Todo lo que busques está aquí</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet"/>
+    <link href="css/bootstrap.min.css" rel="stylesheet" />
+    <link href="css/font-awesome.min.css" rel="stylesheet" />
+    <!--bootstrap icons-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css"/>
+    <!-- animacion de compra exitosa-->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <!--Hojas de estilo-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css\style-cart.css" rel="stylesheet" />
+  </head>
 
-<head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>eMercado - Todo lo que busques está aquí</title>
-  <link href="https://fonts.googleapis.com/css?family=Raleway:300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
-  <link href="css/bootstrap.min.css" rel="stylesheet">
-  <link href="css/font-awesome.min.css" rel="stylesheet">
-  <link href="css/styles.css" rel="stylesheet">
-</head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
+      <div class="container">
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav w-100 justify-content-between">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Inicio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="categories.html">Categorías</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sell.html">Vender</a>
+            </li>
+          </ul>
+        </div>
+        <div class="perfil">
+          <img
+            id="fotoPerfil"
+            alt="Foto de perfil"
+            class="profile-pic"
+            src="img/img_perfil.png"/>
+          <a class="nav-link" id="miPerfil" href="#">Perfil</a>
+        </div>
+      </div>
+    </nav>
 
-<body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark p-1">
-    <div class="container">
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav w-100 justify-content-between">
-          <li class="nav-item">
-            <a class="nav-link" href="index.html">Inicio</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="categories.html">Categorías</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="sell.html">Vender</a>
-          </li>
-          <li class="nav-item">
-          </li>
-        </ul>
+    <main class="row d-flex m-0">
+      <div class="bloque-general row">
+        <div class="col-lg-12">
+          <p class="titulo">Carrito de compras</p>
+        </div>
+        <!-- Sección izquierda: lista de productos agregados -->
+        <div
+          class="contGeneral col-lg-8 col-md-7 col-sm-12"
+          id="productCard">
+        </div>
+
+        <!-- Sección derecha: lista detalle de compra -->
+        <div class="contGeneral2 col-lg-4 col-md-3 col-sm-12">
+          <p class="productName mb-2">Detalle de compra</p>
+          <div class="row">
+            <div class="lista d-flex justify-content-between align-items-center">
+              <p>Envío:</p>
+                <form id="formulario_tipoEnvio justify-content-end align-items-center">
+                  <select id="envio" name="envio" class="form-control" required>
+                    <option value="" disabled selected> Selecciona tipo de envío</option>
+                    <option value="Premium">Premium (2 a 5 días)</option>
+                    <option value="Express">Express (5 a 8 días)</option>
+                    <option value="Standard">Standard (12 a 15 días)</option>
+                  </select>
+                </form>
+            </div>
+            <div class="lista d-flex justify-content-between align-items-center mt-2">
+              <p>Subtotal:</p>
+              <div class="bold d-flex col-9  justify-content-end align-items-center">
+                <select name="select" class="me-2 ">
+                  <option value="UYU">UYU</option>
+                  <option value="USD" selected>USD</option>
+                </select>
+                <p id="total"></p>
+              </div>
+            </div>
+              <div class="lista d-flex justify-content-between align-items-center mt-2">
+                <p> Valor de Envio:</p>
+                <div class="bold d-flex col-9  justify-content-end align-items-center">
+                  <p id="resultadoEnvio"></p>
+                </div>
+              </div>
+              <div class="lista d-flex justify-content-between align-items-center mt-2">
+                <p>Total:</p>
+                <div class="bold d-flex col-9  justify-content-end align-items-center">
+                  <p id="resultadoTotalFinal"></p>
+                </div> 
+              </div>
+            </div>
+           
+            <!-- Botones -->
+            <div class="contBtn">
+              <button
+                type="button"
+                class="btnRojo mb-2"
+                id="completarDatos">
+                Completar datos de envío
+              </button>
+              <button type="button " class="btnAzul" value="seguir" id="seguir">
+                Seguir comprando
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal de dirección y forma de pago -->
+      <div class="modal fade" id="staticBackdrop"  data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true"> <!--data-bs-backdrop="static" hace que el modal no se cierre si se hace click fuera del mismo-->
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title" id="staticBackdropLabel">¡Completá tus datos para finalizar tu compra!</h1>
+            </div>
+            <div class="modal-body">
+            <h2>Dirección de envío</h2>
+            <form id="formulario-datos" action="" class="form was-validated" novalidate>
+              <div class="row">
+            <div class="col-lg-6 form-group text-align-right">
+              <label for="dpto" class="form-group pb-2">Departamento</label>
+              <select id="dpto" class="form-control form-control-sm" required style="max-height: 150px; overflow-y: auto;">
+                <option value="" disabled selected>Selecciona un departamento</option>
+                <option value="Artigas">Artigas</option>
+                <option value="Canelones">Canelones</option>
+                <option value="Cerro Largo">Cerro Largo</option>
+                <option value="Colonia">Colonia</option>
+                <option value="Durazno">Durazno</option>
+                <option value="Flores">Flores</option>
+                <option value="Florida">Florida</option>
+                <option value="Lavalleja">Lavalleja</option>
+                <option value="Maldonado">Maldonado</option>
+                <option value="Montevideo">Montevideo</option>
+                <option value="Paysandú">Paysandú</option>
+                <option value="Río Negro">Río Negro</option>
+                <option value="Rivera">Rivera</option>
+                <option value="Rocha">Rocha</option>
+                <option value="Salto">Salto</option>
+                <option value="San José">San José</option>
+                <option value="Soriano">Soriano</option>
+                <option value="Tacuarembó">Tacuarembó</option>
+                <option value="Treinta y Tres">Treinta y Tres</option>
+              </select>
+            </div>
+            <div class="col-lg-6 form-group align-items-center">
+              <label for="loc" class="pb-2">Localidad</label>
+              <input type="text" id="loc" class="form-control" required>
+              </div>
+            </div>
+              <br>
+              <div class="row mb-3  align-items-center">
+                <div class="col-lg-5 form-group  align-items-center">
+              <label for="calle" class="pb-2">Calle</label>
+              <input type="text" id="calle" class="form-control" required>
+              </div>
+              <div class="col-lg-2 form-group  align-items-center">
+              <label for="nro" class="pb-2">N°</label>
+              <input type="number" class="input-small form-control" id="nro" required>
+            </div>
+            <div class="col-lg-5 form-group align-items-center">
+              <label for="esq" class="pb-2">Esquina</label>
+              <input type="text" id="esq" class="form-control" required>
+            </div>
+              </div>
+              <h2>Forma de pago</h2>
+              <select id="pago" name="pago" class="forma-pago form-control" required>
+              <option value="" selected disabled>Elige una forma de pago</option>
+              <option value="crédito">Tarjeta de crédito</option>
+              <option value="transferencia">Transferencia bancaria</option>
+            </select>
+            </form>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btnFin" id="finalizar">Finalizar compra</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="text-muted">
+      <div class="container">
+        <p class="float-end">
+          <a href="#">Volver arriba</a>
+        </p>
+        <p>
+          Este sitio forma parte de
+          <a href="https://jovenesaprogramar.edu.uy/" target="_blank"
+            >Jovenes a Programar</a>
+            &emsp; 
+          Icons by:
+          <a href="https://lordicon.com/">Lordicon.com</a>
+        </p>
+      </div>
+    </footer>
+    <div id="spinner-wrapper">
+      <div class="lds-ring">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
       </div>
     </div>
-  </nav>
-  <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
-      </div>
-    </div>
-  </main>
-  <footer class="text-muted">
-    <div class="container">
-      <p class="float-end">
-        <a href="#">Volver arriba</a>
-      </p>
-      <p>Este sitio forma parte de <a href="https://jovenesaprogramar.edu.uy/" target="_blank">Jovenes a Programar</a></p>
-    </div>
-  </footer>
-  <div id="spinner-wrapper">
-    <div class="lds-ring">
-      <div></div>
-      <div></div>
-      <div></div>
-      <div></div>
-    </div>
-  </div>
-  <script src="js/bootstrap.bundle.min.js"></script>
-  <script src="js/init.js"></script>
-  <script src="js/cart.js"></script>
-</body>
-
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/init.js"></script>
+    <script type="module" src="js/cart.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src=" https://cdn.lordicon.com/lordicon.js "> </script>
+  </body>
 </html>

@@ -1,8 +1,8 @@
-.jumbotron,
-.card-body,
-.container,
-.site-header {
-  font-family: 'Verdana', serif !important;
+@import url(https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap);
+
+body {
+  font-family: "Poppins" !important;
+  background-color: var(--color-fondo);
 }
 
 .jumbotron .display-4 {
@@ -32,9 +32,10 @@ nav a {
   height: 50vh;
   padding: 5em inherit;
   margin-bottom: 0;
-  background-color: #53C0FB;
-  background: url('../img/cover_back.png');
+  background-color: #53c0fb;
+  background: url("../img/cover_back.png");
   background-size: cover;
+  object-fit: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: black;
@@ -67,18 +68,10 @@ nav a {
   font-size: 38px;
 }
 
-footer {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-}
-
-footer p {
-  margin-bottom: .25rem;
-}
 
 .site-header a {
   color: white;
-  transition: ease-in-out color .15s;
+  transition: ease-in-out color 0.15s;
 }
 
 .site-header .dropdown-menu a {
@@ -86,7 +79,7 @@ footer p {
 }
 
 .dropzone {
-  border: 2px dashed #0087F7;
+  border: 2px dashed #0087f7;
   border-radius: 5px;
   background: white;
 }
@@ -176,7 +169,9 @@ footer p {
 }
 
 main {
-  min-height: calc(100vh - 210px);
+  min-height: calc(
+    100vh - 210px
+  ); /*Esto lo tuve que comentar porque daba problemas en el carrito*/
 }
 
 a.custom-card,
@@ -187,4 +182,196 @@ a.custom-card:hover {
 
 .checked {
   color: orange;
+}
+
+.perfil {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.perfil svg {
+  cursor: pointer;
+  filter: invert(1);
+  opacity: 55%;
+}
+.perfil svg:hover {
+  opacity: 100%;
+}
+
+#miPerfil {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 150px;
+  right: 0;
+  top: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/*Barra de navegación*/
+.navbar {
+  padding: 1% !important;
+  background-color: #1c0e34 !important;
+}
+
+.navbar-dark .navbar-nav {
+  color: #ffffff;
+  font-weight: 400;
+}
+
+#miPerfil {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.nav-link:hover {
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.navbar-dark .navbar-toggler {
+  border-color: transparent; /*quita el borde del icono*/
+  padding: 0%;
+}
+
+.navbar-dark .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1.0)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+} /*icono de menu blanco */
+
+.navbar-collapse {
+  flex-grow: 0.2;
+}
+
+/*footer*/
+footer {
+  background-color: #1c0e34;
+  padding-top: 1rem;
+  padding-bottom: 0.25rem;
+} 
+
+footer a {
+  color: #E4ECFF;
+  text-decoration: underline;
+}
+
+footer a:hover {
+  color: #e83b57;
+}
+
+footer p {
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+
+/*Barra de navegación para resolución menor a 1024px*/
+@media (max-width: 991px) {
+  .navbar-collapse {
+    position: absolute;
+    width: 40%;
+    top: 100%;
+    padding: 0 5% 2%;
+    left: 0;
+    z-index: 1000;
+    background-color: #1c0e34;
+    border-radius: 0 0 15px 0;
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Paleta por defecto (modo día) */
+:root {
+  --color-fondo: #faf9fb;
+  --color-fondo-invertidos: #1c0e34;
+  --color-primario: #1c1c1c;
+  --color-secundario: #000000;
+  --color-boton-azul: #1c0e34;
+  --color-boton-azul-hover: #31195c;
+  --check-valido: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%231c0e34' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  --radio-btn-azul: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%231c0e34'/%3e%3c/svg%3e");
+  --color-fondo-celeste: #e4ecff;
+  --borde: 0px;
+  --hover-cards: #faf9fb;
+  --color-cards: #ffffff;
+  --btn-celeste: #e4ecff;
+  --btn-celeste-hover:#c0d0f9;
+}
+
+/* Paleta para el modo noche */
+body.modo-noche {
+  --color-fondo: #11091F;
+  --color-fondo-invertidos: #faf9fb;
+  --color-primario: #f1f1f1;
+  --color-secundario: #ffffff;
+  --color-boton-azul: #2e77d7;
+  --color-boton-azul-hover: #0056b3;
+  --check-valido: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 8 8'%3e%3cpath fill='%232e77d7' d='M2.3 6.73L.6 4.53c-.4-1.04.46-1.4 1.1-.8l1.1 1.4 3.4-3.8c.6-.63 1.6-.27 1.2.7l-4 4.6c-.43.5-.8.4-1.1.1z'/%3e%3c/svg%3e");
+  --radio-btn-azul: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23fff'/%3e%3c/svg%3e");
+  --color-fondo-celeste: transparent;
+  --borde: 3px;
+  --hover-cards: #20113b;
+  --color-cards: #1c0e34;
+  --btn-celeste: #2e77d7;
+  --btn-celeste-hover: #0056b3;
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  overflow: hidden;
+  display: flex;
+  border-radius: 50%;
+  justify-content: center;
+  align-items: center;
+}
+
+#button-cart {
+  background: #e83b57;
+  margin-left: 10px;
+  color: #ffffff;
+  border: none;
+  border-radius: 7px;
+  height: 1.7rem;
+  width: 1.7rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/*para ajustar el badge del carrito en el dropdown*/
+
+#primerElementoli {
+  display: flex;
+  justify-content: left;
+}
+
+.dropdown-menu li {
+  display: flex;
+  justify-content: left;
 }

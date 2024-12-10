@@ -1,0 +1,554 @@
+body {
+  width: 100%;
+}
+
+main {
+  min-height: auto; /*IMPORTANTE no cambiar esto ya que entra la conf de styles.css y rompe*/
+  justify-content: center;
+  display: flex;
+}
+
+.bloque-general {
+  width: 85%;
+  justify-content: center;
+  color: var(--color-fondo-invertidos);
+}
+
+.titulo {
+  font-size: 2em;
+  padding-left: 5%;
+  margin: 3% 0 3%;
+  font-weight: 700;
+}
+
+.card {
+  padding: 3%;
+  border-radius: 25px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5%;
+  border-color: none;
+  border-style: solid;
+  overflow: hidden;
+  display: flex;
+  background-color: var(--color-cards);
+}
+
+.contImg {
+  height: 8em;
+  width: 8em;
+  overflow: hidden; /* Para ocultar cualquier parte que sobresalga */
+  position: relative; /* Permite centrar la imagen */
+  padding: 0;
+  border-radius: 15px;
+}
+
+.imgProducto {
+  width: auto; /* Mantiene la relación de aspecto */
+  height: 100%; /* Ajusta la altura al contenedor */
+  position: absolute; /* Permite centrar la imagen */
+  background-size: cover;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+}
+
+.nameButton {
+  width: auto;
+  display: flex;
+}
+
+/*Estilo elegir la moneda*/
+
+select {
+  height: 2.2em;
+  border-radius: 9px;
+  border-color: #c0d0f9;
+  border-width: 2px;
+  padding: 2px;
+  text-align: center;
+  color: #1c0e34;
+  font-weight: 600;
+}
+
+select:focus {
+  border: 2px solid #1c0e34;
+  outline: none;
+}
+
+/*boton rojo basura*/
+
+.btnBlockRojo {
+  background: #e83b57;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  border-radius: 7px;
+  height: 1.7rem;
+  width: 1.7rem;
+  transition: background-color 0.5s ease;
+}
+
+.btnBlockRojo:hover {
+  background: #c13149;
+}
+
+.trash {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/*Nombre del producto*/
+.productName {
+  font-size: 110%;
+  font-weight: 700;
+  margin-bottom: 2%;
+  color: var(--color-fondo-invertidos);
+}
+
+/*Linea de precio*/
+
+.precio {
+  font-size: 0.9em;
+}
+
+/*estilo input*/
+input {
+  border: 2.5px solid #e4ecff;
+  border-radius: 8px;
+  width: 11%;
+
+  aspect-ratio: 1/1;
+}
+input:focus {
+  border: 2.5px solid #1c0e34;
+  outline: none;
+}
+
+/*subtotal text y precio*/
+.subtotal {
+  width: 50%;
+}
+
+.subtotal-text {
+  margin-bottom: 0;
+  font-size: 0.9em;
+}
+
+.subtotalNum {
+  font-weight: 700;
+}
+
+/*cantidad*/
+
+.cantidad {
+  font-size: 0.9rem;
+}
+
+/*seccion derecha*/
+
+/*sin puntos en la lista*/
+
+.sin-puntos {
+  list-style-type: none;
+  /* Quita los puntos de la lista */
+  padding: 0;
+  /* Elimina el padding */
+  margin: 0;
+  /* Elimina el margen */
+  display: flex;
+  /* Hace que la lista use flexbox */
+  justify-content: space-between;
+  /* Espacio entre los elementos */
+}
+
+label {
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+.contGeneral2 {
+  padding: 3%;
+  border-radius: 25px;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  margin-bottom: 5%;
+  border-color: #e4ecff;
+  border-style: solid;
+  overflow: hidden;
+  border: none;
+  background-color: var(--color-cards);
+  height: fit-content;
+  color: var(--color-fondo-invertidos);
+}
+
+/*botones*/
+
+.btnRojo {
+  background: #e83b57;
+  color: #ffffff;
+  font-weight: 700;
+  align-items: right;
+  border: none;
+  border-radius: 10px;
+  height: 2.5rem;
+  width: 100%;
+  transition: background-color 0.5s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  margin-top: 5%;
+}
+
+.btnRojo:hover {
+  background: #c13149;
+}
+.btnAzul {
+  background-color: var(--btn-celeste);
+  color: var(--color-fondo-invertidos);
+  font-weight: 700;
+  align-items: right;
+  border: none;
+  border-radius: 10px;
+  height: 2.5rem;
+  width: 100%;
+  transition: background-color 0.5s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+}
+
+.btnAzul:hover {
+  background-color: var(--btn-celeste-hover);
+}
+
+.contBtn {
+  width: 100%;
+}
+
+.lista p {
+  font-size: 0.9rem;
+  margin-bottom: 2%;
+}
+
+#total {
+  margin-bottom: 0;
+}
+
+.bold {
+  font-weight: 700;
+}
+
+/* Ocultar los spinners*/
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* estilo del modal*/
+
+h1 {
+  padding: 10px;
+  margin: auto;
+  display: flex;
+  font-size: 1rem;
+  color: rgb(92, 92, 92);
+  background-color: #e0dfdf;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: bolder;
+  color: var(--color-fondo-invertidos);
+  font-weight: 600;
+  padding-top: 10px;
+  padding-bottom: 5px;
+}
+
+.modal-header,
+.modal-body,
+.modal-footer {
+  border: none;
+}
+
+.modal {
+  backdrop-filter: blur(2px);
+  transition: all 0.2s ease-in-out;
+}
+
+.modal-title {
+  background: rgb(228, 236, 255);
+  color: #1c0e34;
+  border-radius: 9px;
+  padding: 1em 2em;
+}
+.modal-content {
+  justify-content: center;
+  border-radius: 30px;
+  box-shadow: 0 8px 8px rgba(0, 0, 0, 0.2);
+  margin: 15% auto;
+  padding: 20px;
+  width: 100%;
+  background-color: var(--color-cards);
+}
+
+.modal-content label {
+  font-weight: 500;
+  color: var(--color-secundario);
+}
+
+.modal-content input {
+  font-size: 14px;
+  border: 2px solid #c8dce9;
+  border-radius: 10px;
+  background-color: #ffffff;
+  color: #000000;
+  height: 2.2rem;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.modal-content input:focus {
+  box-shadow: none !important;
+}
+.modal-dialog {
+  width: 100%;
+  max-width: 45rem;
+  margin: auto;
+}
+.modal-footer {
+  padding: 0;
+}
+.input-small.form-control {
+  width: 100%;
+  height: 2.2rem;
+  margin: 0;
+}
+
+.forma-pago {
+  width: 15rem;
+}
+
+select.form-control {
+  height: 2.5em;
+  padding: 0.2em 0.5em;
+  border: 2px solid #c8dce9;
+  border-radius: 10px;
+  background-color: #ffffff;
+  font-size: 14px;
+  font-weight: 600;
+  border-color: #c0d0f9;
+}
+
+.form-control:focus {
+  border: 2px solid #1c0e34;
+  outline: none;
+
+  background-color: #fff;
+
+  outline: 0;
+  box-shadow: 0 0 0 0rem rgba(13, 110, 253, 0.25);
+}
+
+option {
+  font-size: 14px;
+}
+
+.btnFin {
+  background: #e83b57;
+  color: #ffffff;
+  font-weight: 700;
+  align-items: right;
+  border: none;
+  border-radius: 10px;
+  height: 2.5rem;
+  padding-left: 1em ;
+  padding-right: 1em ;
+
+  transition: background-color 0.5s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+  font-size: 0.9rem;
+  margin: 20px auto;
+}
+
+.btnFin:hover {
+  background: #c13149;
+}
+
+.btnFin:focus {
+  background: #c13149;
+}
+
+/* modificaciones de feedback de campos para que vayan con el estilo*/
+.form-control.is-valid,
+.was-validated .form-control:valid {
+  background-image: var(--check-valido);
+  border-color: var(--color-boton-azul);
+  outline: none;
+}
+.form-control.is-valid:focus,
+.was-validated .form-control:valid:focus {
+  border-color: var(--color-boton-azul);
+  box-shadow: none;
+}
+
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12' width='12' height='12' fill='none' stroke='%23ea4f55'%3e%3ccircle cx='6' cy='6' r='4.5'/%3e%3cpath stroke-linejoin='round' d='M5.8 3.6h.4L6 6.5z'/%3e%3ccircle cx='6' cy='8.2' r='.6' fill='%23ea4f55' stroke='none'/%3e%3c/svg%3e");
+}
+.form-control.is-invalid:focus,
+.was-validated .form-control:invalid:focus {
+  border-color: #ea4f55;
+  box-shadow: none;
+}
+
+/*Media queries para pantalla small */
+@media (max-width: 767px) {
+  .titulo {
+    font-size: 1.1em;
+    margin-top: 10%;
+    margin-bottom: 5%;
+    margin-left: 0;
+  }
+
+  .productName {
+    font-size: 0.9em;
+  }
+
+  .contGeneral2 .productName {
+    font-size: 1em;
+    margin-bottom: 5%;
+  }
+
+  .subtotal {
+    font-size: 1em;
+  }
+
+  .subtotal-text {
+    font-size: 0.7em;
+  }
+
+  .cantidad {
+    font-size: 0.7em;
+  }
+
+  .contImg {
+    height: 5em;
+    width: 5em;
+  }
+
+  input {
+    margin: 0;
+    height: 2.6em;
+    width: 2.6em;
+  }
+
+  .card {
+    margin-bottom: 10%;
+    border-color: #e4ecff;
+  }
+
+  .nameButton {
+    margin-bottom: 5%;
+  }
+
+  .card-body {
+    padding: 0;
+    margin-left: 3%;
+  }
+
+  .contGeneral {
+    padding: 0 0;
+  }
+
+  .contGeneral2 {
+    margin: 5%;
+    padding: 10%;
+
+    border: none;
+  }
+
+  .contBtn {
+    display: flex;
+    /* Usar flexbox para alinear los botones */
+    flex-direction: row;
+    /* Alinear en fila */
+    justify-content: center;
+    /* Centrar horizontalmente */
+    flex-wrap: wrap;
+    /* Permitir que los botones se envuelvan en pantallas más pequeñas */
+  }
+
+  .btnAzul {
+    background-color: #e4ecff;
+    /*color de fondo nuevo*/
+  }
+
+  .row {
+    --bs-gutter-x: 0;
+  }
+}
+
+/*tablet*/
+@media (min-width: 768px) and (max-width: 1023px) {
+  p.titulo {
+    font-size: 17px;
+    padding-left: 0%;
+    padding-top: 4%;
+    padding-bottom: 5%;
+  }
+
+  .bloque-general {
+    justify-content: left;
+  }
+
+  .contGeneral2 {
+    margin-left: 0%;
+    margin-right: 0%;
+    width: 37%;
+  }
+
+  .contImg {
+    height: 5em;
+    width: 5em;
+  }
+
+  .card {
+    border-color: #e4ecff;
+    padding-right: 0%;
+  }
+
+  .productName {
+    font-size: 1em;
+  }
+
+  .subtotal {
+    font-size: 0.8em;
+  }
+
+  .subtotal-text {
+    font-size: 0.6em;
+  }
+  .cantidad {
+    font-size: 0.6em;
+  }
+
+  .precio {
+    font-size: 0.7em;
+  }
+
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding-bottom: 5%;
+  }
+
+  .btnBlockRojo {
+    height: 1.5em;
+    width: 1.5em;
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 0;
+  }
+}

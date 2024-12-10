@@ -1,0 +1,322 @@
+.controles {
+  margin: 2% auto;
+  margin-right: 8%;
+  display: flex;
+}
+
+.botones {
+  margin: 2% 0;
+}
+
+[type="search"] {
+  outline-offset: 0px;
+}
+
+.controles button {
+  background: #e4ecff;
+  color: #1c0e34;
+  margin: auto 4px;
+  font-weight: 400;
+  align-items: right;
+  border: none;
+  border-radius: 5px;
+  height: 2rem;
+  transition: background-color 0.5s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.controles button:hover {
+  background: #cad9fc;
+}
+
+input {
+  border: 2px solid #efefef;
+  border-radius: 6px;
+  background-color: #efefef;
+  font-size: 1rem;
+}
+
+/* al pasar el mouse por arriba se muestra un borde */
+
+input:hover {
+  border: 2px solid #1c0e34;
+  transition: border-color 0.5s ease;
+}
+
+/* al hacer click se mantiene el borde de color */
+
+input[type="text"] {
+  border-color: #1c0e34;
+  outline: none; /* esto sirve para sacar el borde por defecto del navegador */
+  box-shadow: none;
+  background-color: #efefef;
+}
+
+#products-container {
+  align-items: center;
+}
+
+.product-item {
+  color: var(--color-secundario);
+  margin: auto;
+  margin-bottom: 3%;
+  margin-top: 3%;
+  cursor: pointer;
+  padding: 3% 5%;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.2);
+  border-radius: 30px;
+  border-top-right-radius: 30px;
+  background-color: var(--color-cards);
+}
+
+
+.product-item:hover {
+  background-color: var(--hover-cards);
+}
+
+.cont_img {
+  display: flex;
+  border-radius: 20px;
+  overflow: hidden;
+  padding: 0;
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+h4 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--color-fondo-invertidos);
+  justify-content: flex-start;
+}
+
+p {
+  font-size: 0.4rem;
+  font-weight: 400;
+  margin-bottom: 0;
+}
+
+#precio {
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: var(--color-fondo-invertidos);
+}
+
+.sold {
+  display: flex;
+  flex-direction: row-reverse;
+  text-align: right;
+  font-weight: 400;
+  color: var(--color-primario);
+  padding-right: 10px;
+}
+
+.btnBlockRojo {
+  background: #e83b57;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  font-weight: 700;
+  border: none;
+  border-radius: 7px;
+  height: 2rem;
+  width: 2rem;
+  transition: background-color 0.5s ease;
+  box-sizing: border-box;
+  -webkit-appareance: button;
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.nameButton {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 5%;
+}
+
+.btnBlockRojo:hover {
+  background: #c13149;
+}
+
+.bloque_madre {
+  padding: 0;
+  padding-left: 5%;
+  padding-top: 2%;
+  padding-bottom: 2%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.bloqueGrande {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnRojo {
+  background: #e83b57;
+  color: #ffffff;
+  font-weight: 700;
+  align-items: right;
+  border: none;
+  border-radius: 10px;
+  height: 2.5rem;
+  width: 8rem;
+  transition: background-color 0.5s ease;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.btnRojo:hover {
+  background: #c13149;
+}
+
+.description {
+  color: var(--color-secundario);;
+  font-size: 20px;
+}
+
+/*Smartphone Pequeño */
+@media (max-width: 767px) {
+  #preciomin,
+  #preciomax {
+    width: 30%;
+    margin: 2% 0 0 0;
+  }
+
+  .product-item {
+    margin: 0 8%;
+    margin-bottom: 3%;
+    padding: 8%;
+  }
+
+  .cont_img {
+    padding: 0;
+    margin-bottom: 5%;
+  }
+
+  .description {
+    font-size: 0.8rem;
+    padding-bottom: 5%;
+  }
+
+  small {
+    font-size: 0.6rem;
+  }
+
+  #precio,
+  h4 {
+    font-size: 1.1rem;
+  }
+
+  .bloque_madre {
+    padding-left: 0%;
+  }
+
+  .btnRojo {
+    width: 6rem;
+    height: 1.8rem;
+    font-size: 0.8em;
+    border-radius: 8px;
+  }
+
+  .controles {
+    margin-right: 0;
+  }
+
+  .sold {
+    font-size: smaller;
+  }
+  #precio {
+    font-size: 1em;
+  }
+}
+
+/* Tableta en Modo Vertical */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .controles {
+    margin-right: 0;
+  }
+
+  .description {
+    font-size: medium;
+  }
+
+  .sold {
+    font-size: smaller;
+  }
+
+  .btnRojo {
+    width: 7rem;
+    height: 2rem;
+  }
+
+  #precio {
+    font-size: 1.5em;
+  }
+
+  h4 {
+    font-size: 1.5rem;
+  }
+
+  .bloque_madre {
+    padding-top: 0%;
+    padding-bottom: 0%;
+  }
+}
+
+.perfil {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.perfil svg {
+  cursor: pointer;
+  filter: invert(1);
+  opacity: 55%;
+}
+.perfil svg:hover {
+  opacity: 100%;
+}
+
+#miPerfil {
+  cursor: pointer;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border: 1px solid #ccc;
+  width: 150px;
+  right: 0;
+  top: 50px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-menu li {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: inherit;
+}
